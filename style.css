@@ -1,0 +1,830 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+}
+nav {
+  height: 10vh;
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+nav .btn1 {
+  border-radius: 10px;
+  padding: 15px;
+  background-color: transparent;
+  border: 2px solid rgb(41, 162, 41);
+  cursor: pointer;
+}
+nav .btn1:hover {
+  color: aliceblue;
+  background-color: rgb(41, 162, 41);
+  transition: 0.3s;
+}
+nav ul {
+  display: flex;
+}
+nav ul li a {
+  padding: 1.5vh 2.5vh;
+  color: black;
+  cursor: pointer;
+  font-size: 20px;
+}
+nav ul li a:hover {
+  color: rgb(41, 162, 41);
+  transition: 0.7s;
+  border-bottom: 1px solid rgb(41, 162, 41);
+  border-top: 1px solid rgb(41, 162, 41);
+}
+#checkbtn {
+  font-size: 5vw;
+  display: none;
+  cursor: pointer;
+  color: chartreuse;
+}
+#checkbtn:hover {
+  color: rgb(54, 145, 54);
+}
+#check {
+  display: none;
+}
+#check:checked ~ ul {
+  right: 0;
+}
+@media (max-width: 867px) {
+  #checkbtn {
+    display: block;
+  }
+  nav ul {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(65, 170, 65);
+    position: fixed;
+    top: 80px;
+    right: -100%;
+    transition: 0.5s;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  nav ul li {
+    display: block;
+    line-height: 80px;
+    margin: 20px;
+    font-size: 3vw;
+  }
+  nav ul li a {
+    padding: 1.5vh 2.5vh;
+    color: whitesmoke;
+    cursor: pointer;
+  }
+  nav ul li a:hover {
+    color: rgb(41, 162, 41);
+    transition: 0.7s;
+    border-bottom: 1px solid rgb(41, 162, 41);
+    border-top: 1px solid rgb(41, 162, 41);
+  }
+}
+.section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+.buttons .btn2 {
+  padding: 8px 28px;
+  border: none;
+  background-color: rgb(41, 162, 41);
+  color: aliceblue;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.buttons .btn2:hover {
+  background-color: transparent;
+  color: rgb(41, 162, 41);
+  border: 1px solid rgb(41, 162, 41);
+  transition: 0.3s;
+}
+.buttons .btn3 {
+  padding: 8px 28px;
+  border: none;
+  background-color: transparent;
+  color: black;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.buttons .btn3:hover {
+  background-color: rgb(41, 162, 41);
+  color: aliceblue;
+  transition: 0.3s;
+}
+.div {
+  height: 30px;
+  width: 90px;
+  border: 1px solid rgb(41, 162, 41);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(41, 162, 41);
+  border-radius: 50%;
+}
+.section .moon h1 {
+  font-size: 5.5vmin;
+  font-weight: 600;
+  padding: 5px 0;
+}
+.section .moon p {
+  font-size: 15px;
+  font-weight: 500;
+  padding: 5px 0;
+}
+.section h1 span {
+  color: rgb(41, 162, 41);
+}
+@media (max-width: 1024px) {
+  .section {
+    padding-top: 70px;
+    transition: 0.5s;
+  }
+  .section .moon h1 {
+    font-size: 3.5vmax;
+  }
+  .section .moon p {
+    font-size: 1.5vmax;
+  }
+  .section .img img {
+    padding-top: 50px;
+    height: 40vmax;
+  }
+  .card {
+    padding: 0 50px;
+  }
+  .card .hire .btn4 {
+    padding: 10px 30px;
+    background-color: rgb(41, 162, 41);
+  }
+  .type {
+    padding-left: 30px;
+  }
+  /* .holder .manage .pic {
+    height: 44vw;
+  }
+  .holder .magic .foot .more {
+    height: 20vw;
+  }
+  .holder .go .rule {
+    height: 1.5vw;
+  }
+  .holder .go .rare {
+    height: 1.5vw;
+  }
+  .holder .there .ur {
+    height: 20vw;
+  } */
+  .mood {
+    padding-left: 30px;
+  }
+  .gon p {
+    font-size: 10px;
+  }
+}
+@media (max-width: 768px) {
+  nav .fairy {
+    height: 5vmin;
+  }
+  #checkbtn {
+    font-size: 4vmin;
+  }
+  .section {
+    padding: 0 40px;
+  }
+  .container {
+    font-size: 20px;
+  }
+  .card {
+    padding-top: 50%;
+  }
+  .card {
+    gap: 30px;
+  }
+  .road .design {
+    padding-bottom: 50px;
+  }
+  .table {
+    padding: 80px 0;
+  }
+  /* .holder .manage .pic {
+    height: 40vw;
+    position: relative;
+    left: 60px;
+  }
+  .holder .magic .foot .more {
+    height: 20vw;
+    position: relative;
+    bottom: 40px;
+  }
+  .holder .there .ur {
+    height: 20vw;
+    position: relative;
+    top: 40px;
+  }
+  .holder .go .rule {
+    height: 1.5vw;
+    position: relative;
+    left: 50px;
+  }
+  .holder .go .rare {
+    height: 1.5vw;
+    position: relative;
+    right: 50px;
+  } */
+}
+@media (max-width: 320px) {
+  .divt {
+    flex-direction: column;
+  }
+  .section .img img {
+    height: 40vmax;
+  }
+  nav .fairy {
+    height: 7vmin;
+  }
+  nav .btn1 {
+    padding: 5px 10px;
+    font-size: 10px;
+  }
+  .section .btn2 {
+    padding: 5px 10px;
+    font-size: 10px;
+  }
+  .section .btn3 {
+    padding: 5px 10px;
+    font-size: 10px;
+  }
+  .container .divo {
+    padding: 0 10px;
+  }
+  .card .hire .btn4 {
+    padding: 2px 10px;
+  }
+  .type {
+    padding-left: 0;
+  }
+  .table .phone .input1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .table .phone .input2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .fp input {
+    padding-right: 10px;
+  }
+  .fp {
+    padding-right: 100px;
+  }
+}
+@media (max-width: 375px) {
+  nav .fairy {
+    height: 7vmin;
+  }
+  nav .btn1 {
+    padding: 5px 10px;
+    font-size: 10px;
+  }
+  .section .btn2 {
+    padding: 5px 10px;
+  }
+  .key {
+    padding: 0 30px;
+  }
+  .container {
+    padding: 0 30px;
+  }
+  .mood {
+    padding-right: 30px;
+  }
+  .type {
+    padding-left: 0;
+  }
+  .it h2 {
+    font-size: 20px;
+  }
+  .it p {
+    font-size: 15px;
+  }
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding-top: 10%;
+  transition: 0.3s;
+}
+.container span {
+  color: rgb(41, 162, 41);
+  font-size: 3vmin;
+  font-weight: 400;
+}
+.container h3 {
+  font-size: 2vmin;
+  font-weight: 400;
+}
+.container .divo {
+  border-left: 1px solid rgb(41, 162, 41);
+  border-right: 1px solid rgb(41, 162, 41);
+  padding: 0 50px;
+}
+.image img {
+  float: right;
+  padding-top: 30px;
+  height: 20vmin;
+}
+.card {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-top: 10%;
+  transition: 0.3s;
+}
+.type {
+  padding-left: 30px;
+}
+.road {
+  display: flex;
+  /* gap: 100px; */
+  align-items: center;
+}
+.visual {
+  padding-bottom: 20px;
+}
+.Ux {
+  padding-top: 20px;
+}
+.card i {
+  color: rgb(41, 162, 41);
+  font-size: 3vmin;
+}
+.card h2 {
+  font-weight: 600;
+  padding: 5px 0;
+}
+.card h2 span {
+  color: rgb(41, 162, 41);
+}
+.card .hire .btn4 {
+  padding: 10px 35px;
+  background-color: rgb(41, 162, 41);
+  border: none;
+  color: aliceblue;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.card .hire .btn4:hover {
+  background-color: transparent;
+  border: 1px solid rgb(41, 162, 41);
+  color: rgb(41, 162, 41);
+  transition: 0.3s;
+}
+.card h3 {
+  font-size: 1.5vmax;
+  padding: 5px 0;
+}
+.card p {
+  font-size: 15px;
+  padding: 5px 0;
+}
+/* .road {
+  padding-left: 25px;
+} */
+@media (max-width: 425px) {
+  .section {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 60px;
+  }
+  .boxy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .buttons {
+    display: flex;
+    justify-content: center;
+  }
+  .container {
+    padding-top: 20%;
+    padding: 20% 80px;
+  }
+  .card {
+    padding-top: 20%;
+  }
+  .card {
+    flex-direction: column;
+    text-align: center;
+  }
+  .boom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .road {
+    flex-direction: column;
+    padding-top: 50px;
+  }
+  .type {
+    padding-top: 50px;
+
+    padding-left: 0;
+  }
+  .card .hire .btn4 {
+    padding: 5px 20px;
+  }
+  .mood {
+    flex-direction: column;
+  }
+  .board img {
+    height: 3vw;
+  }
+  .key {
+    padding: 0 30p;
+  }
+  nav .btn1 {
+    padding: 5px 10px;
+  }
+  .section .btn2 {
+    padding: 5px 20px;
+  }
+  .table {
+    flex-direction: column;
+  }
+  .table img {
+    height: 40px;
+  }
+  .phone {
+    /* padding-left: 65px; */
+  }
+  .table .phone .input1 input {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 10px;
+  }
+  .table .phone .input2 input {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 10px;
+  }
+  .fp input {
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    padding-right: 54%;
+    padding-bottom: 19%;
+  }
+  .bbt {
+    padding-top: 10px;
+  }
+  .bbt .btn {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+  .divt {
+    gap: 20px;
+    padding: 0 20px;
+  }
+  .divt p {
+    font-size: 10px;
+  }
+
+  /* .cheer {
+    flex-direction: column;
+  }
+  .my {
+    height: 20vw;
+  }
+  .rare {
+    display: none;
+  }
+  .ur {
+    display: none;
+  }
+  .holder {
+    display: flex;
+  } */
+}
+.hey img {
+  height: 17vmin;
+}
+/* .cheer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.holder {
+  display: flex;
+} */
+/* .magic .manage .pic {
+  position: relative;
+  left: 80px;
+} */
+.mine {
+  padding-left: 100px;
+}
+.mine .fig .portfolio {
+  height: 30px;
+  width: 80px;
+  border-radius: 50%;
+  border: 1px solid rgb(41, 162, 41);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(41, 162, 41);
+}
+.mine h2 {
+  font-size: 1.5vmax;
+  padding: 10px 0;
+}
+.mine h2 span {
+  color: rgb(41, 162, 41);
+}
+.mine p {
+  font-size: 15px;
+  padding: 10px 0;
+}
+.mine .btn5 {
+  padding: 7px 20px;
+  background-color: rgb(41, 162, 41);
+  border: none;
+  color: aliceblue;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.mine .btn5:hover {
+  background-color: transparent;
+  border: 1px solid rgb(41, 162, 41);
+  color: rgb(41, 162, 41);
+  transition: 0.3s;
+}
+.fle img {
+  float: right;
+  height: 17vmin;
+  /* padding-top: 50px; */
+}
+.mouse {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.rem .mo {
+  height: 30px;
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(41, 162, 41);
+  border: 1px solid rgb(41, 162, 41);
+  border-radius: 50%;
+}
+.key h2 {
+  font-size: 25px;
+  padding: 5px 0;
+  color: rgb(40, 39, 39);
+}
+.key h2 span {
+  color: rgb(41, 162, 41);
+}
+.mood {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding-top: 70px;
+}
+.mood .gon {
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 20px 20px 20px rgb(246, 235, 235);
+}
+.gon .star i {
+  color: rgb(255, 191, 0);
+  padding: 15px 0;
+}
+.ko {
+  display: flex;
+  gap: 15px;
+  padding-top: 20px;
+}
+.ko .lp h6 {
+  padding: 2px 0;
+}
+.ko .lp p {
+  font-size: 10px;
+  color: gray;
+}
+/* .magic {
+  display: flex;
+}
+.foot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+} */
+/* .go {
+  display: flex;
+  gap: 80px;
+} */
+/* .foot .more { */
+/* position: relative;
+  bottom: 80px; */
+
+/* .there {
+  display: flex;
+  justify-content: center;
+  align-items: center; */
+/* position: relative;
+  bottom: 98px; */
+
+/* .my {
+  display: none;
+}
+.go {
+  float: right;
+} */
+.core {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 10%;
+}
+.no {
+  height: 30px;
+  width: 80px;
+  border: 1px solid rgb(41, 162, 41);
+  color: rgb(41, 162, 41);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.kol {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.it span {
+  color: rgb(41, 162, 41);
+}
+.it p {
+  font-size: 1.8vmin;
+}
+.table {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+  gap: 50px;
+}
+.call .to1 {
+  display: flex;
+  padding-bottom: 30px;
+}
+.call .to1 .jo {
+  flex-direction: column;
+  padding-left: 20px;
+  padding-top: 10px;
+}
+.call .to2 {
+  display: flex;
+  padding-top: 15px;
+  padding-bottom: 30px;
+}
+.jo p {
+  font-size: 15px;
+  color: gray;
+}
+.jo h6 {
+  font-size: 10px;
+  padding: 5px 0;
+}
+.call .to2 .jo {
+  flex-direction: column;
+  padding-left: 20px;
+  padding-top: 10px;
+}
+.call .to3 {
+  display: flex;
+  padding-top: 15px;
+}
+.call .to3 .jo {
+  flex-direction: column;
+  padding-left: 20px;
+  padding-top: 10px;
+}
+.call .to {
+  display: flex;
+}
+.call .to .jo {
+  flex-direction: column;
+  padding-left: 20px;
+  padding-top: 10px;
+}
+.phone {
+  flex-direction: column;
+  padding-top: 30px;
+}
+.phone .input1 {
+  display: flex;
+  gap: 10px;
+}
+.phone .input1 input {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 35px;
+  border-radius: 7px;
+  border: 1px solid gray;
+}
+.phone .input2 {
+  display: flex;
+  gap: 10px;
+  padding-top: 15px;
+}
+.phone .input2 input {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 35px;
+  border-radius: 7px;
+  border: 1px solid gray;
+}
+.fp input {
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  padding-right: 59%;
+  padding-bottom: 29%;
+  border-radius: 7px;
+  border: 1px solid gray;
+}
+.fp {
+  padding-top: 10px;
+}
+.bbt {
+  float: right;
+  padding-right: 33%;
+  margin-top: 30px;
+}
+.btn {
+  padding: 10px 20px;
+  background-color: rgb(41, 162, 41);
+  color: aliceblue;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: transparent;
+  border: 1px solid rgb(41, 162, 41);
+  color: rgb(41, 162, 41);
+}
+.hrr {
+  margin-top: 8%;
+  padding-left: 25%;
+  padding-right: 25%;
+}
+.divt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+  padding: 10px 0;
+}
+.divt i {
+  color: rgb(41, 162, 41);
+}
